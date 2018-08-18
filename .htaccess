@@ -1,0 +1,17 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www\.voip\.fryntiz\.es
+RewriteRule ^ https://voip.fryntiz.es%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^http:\/\/www\.voip\.fryntiz\.es
+RewriteRule ^ https://voip.fryntiz.es%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^http:\/\/voip\.fryntiz\.es
+RewriteRule ^ https://voip.fryntiz.es%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^https:\/\/www\.voip\.fryntiz\.es
+RewriteRule ^ https://voip.fryntiz.es%{REQUEST_URI} [L,R=301]
+
+RewriteCond %{HTTP_HOST} ^https://www\.voip\.fryntiz\.es
+RewriteRule ^ https://voip.fryntiz.es%{REQUEST_URI} [L,R=301]
