@@ -56,12 +56,13 @@ setEnv() {
 permisos() {
     echo 'Aplicando permisos y propietario www-data'
     if [[ "$SERVERENV" = 'prod' ]]; then
-        sudo chown -R www-data:$ADMIN "$DIR_DESTINO"
+        sudo chown -R www-data:www-data "$DIR_DESTINO"
     elif [[ "$SERVERENV" = 'dev' ]]; then
         sudo chown -R $USER:www-data "$DIR_DESTINO"
     fi
 
     if [[ -d "$DIR_DESTINO/$DIR_WEB" ]]; then
+        echo 'Dando permisos al directorio público de la web'
         sudo chmod 775 -R "$DIR_DESTINO/$DIR_WEB"
     fi
 }
