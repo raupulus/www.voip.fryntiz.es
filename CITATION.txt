@@ -1,0 +1,10 @@
+If you use www.fryntiz.es for any published work, please cite it using the reference
+below:
+
+@Misc{,
+  author       = {Raúl Caro Pastorino},
+  organization = {https://gitlab.com/fryntiz/www.voip.fryntiz.es},
+  title        = {Web of Raúl Caro Pastorino},
+  year         = {2018},
+  url          = "https://voip.fryntiz.es"
+}
